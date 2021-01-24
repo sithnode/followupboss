@@ -1,0 +1,15 @@
+import requests
+
+url = "https://api.followupboss.com/v1/people/2"
+
+payload = "\r\n{\r\n    \"customLink\" : \"Custom Data"\r\n\r\n}\r\n"
+headers = {
+  'X-System': 'Your System',
+  'X-System-Key': 'Enter your Key',
+  'Authorization': 'Basic Your_Auth',
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("PUT", url, headers=headers, data = payload)
+
+print(response.text.encode('utf8'))
