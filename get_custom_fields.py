@@ -21,6 +21,6 @@ custom = {}
 
 i = 0
 while i < len(r['customfields']):
-    custom[r['customfields'][i]['name']]='value'
+    custom[r['customfields'][i]['name']]=''
     i = i+1
 print(custom)
